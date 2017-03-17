@@ -1,5 +1,5 @@
 class Artist < ActiveRecord::Base
   has_many :songs
-  belongs_to :country
+  belongs_to :country, through
 
 end
