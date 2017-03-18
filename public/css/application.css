@@ -12,14 +12,28 @@
 
 .header {
   text-align: center;
+  font-weight: bold;
+}
+
+
+h1.header{
+  font-weight: bolder;
+}
+
+.about {
+  text-align: center justify;;
+  margin: 40px;
+  margin-right: 250px;
+  margin-left: 250px;
 }
 
 .wide {
   width:100%;
   height:100%;
   height:calc(100% - 1px);
-  background-image:url('https://the132welldraft.files.wordpress.com/2015/09/cropped-world-map-watercolor-michael-tompsett1.jpg?w=1200');
+  background-image:url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/world-map-watercolor-michael-tompsett.jpg');
   background-size:cover;
+  image-rendering: auto;
 }
 
 nav {
@@ -192,4 +206,9 @@ div {
         border-radius: 5px;
         background-color: #f2f2f2;
         padding: 20px;
+    }
+
+    #login-form {
+      align-items: center;
+      width: 70px;
     }
