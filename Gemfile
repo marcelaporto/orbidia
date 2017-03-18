@@ -20,3 +20,7 @@ gem 'shotgun'
 
 gem 'faker'
 gem 'rspec'
+
+# Add ons for the app
+
+gem 'iso_country_codes'
