@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
   has_many :preferences
 
   def password
-    @password ||= Password.new(hashed_password)
+    @password ||= BCrypt::Password.new(hashed_password)
   end
 
   def password=(plaintext)
