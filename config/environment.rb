@@ -26,7 +26,10 @@ require "sinatra/reloader" if development?
 enable :sessions
 
 require 'erb'
+
+# Add ons for the app
 require 'iso_country_codes'
+require 'faker'
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))

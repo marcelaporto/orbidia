@@ -1,4 +1,4 @@
-class Activity < ActiveRecord::Base
+class Mood < ActiveRecord::Base
   has_many :sugestions
   has_many :songs, through: :sugestions
   has_many :genres, through: :songs
