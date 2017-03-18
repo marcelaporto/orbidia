@@ -7,10 +7,29 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/application.css">
 
     <title></title>
   </head>
   <body>
+    <div class="wide">
+    <header>
+      <a href="/about">About</a>
+      <% if logged_in? %>
+      <form action="/sessions/:id" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <button id="logout" type="submit">Log Out</button>
+      <% else %>
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
+      <% end %>
+    </header>
+
+    <h1 class="header">orbidia</h1>
+
+    <h4 class="header">Creativity around the world, from those who are living it. </h4>
+</div>
+
 <%= yield %>
   </body>
 </html>
