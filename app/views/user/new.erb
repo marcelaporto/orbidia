@@ -1,0 +1,44 @@
+<h1>Welcome</h1>
+<div>
+<h4>Register</h4>
+<form class="form-inline" action="/register" method="POST">
+  <div class="form-group">
+<label for="fullname">Your full name:</label>
+<input type="email" class="form-control" id="fullname" name="user[fullname]">
+</div>
+  <div class="form-group">
+<label for="email">Email address:</label>
+<input type="email" class="form-control" id="email" name="user[email]">
+</div>
+<div class="form-group">
+<label for="pwd">Password:</label>
+<input type="password" class="form-control" id="pwd" name="user[password]">
+</div>
+<label for="preferences"> Preferences: </label>
+<br>
+<label for="preferences">Country number 1:</label>
+  <select id="countries-preference">
+    <% @countries.each do |country| %>
+    <%= country.name %>
+    <option value= <%= country.name %>>
+      <% end %>
+  </select>
+  <br>
+<label for="preferences">Country number 2:</label>
+  <select id="countries-preference">
+    <% @countries.each do |country| %>
+    <%= country.name %>
+    <option value= <%= country.name %>>
+      <% end %>
+  </select>
+  <label for="preferences">Any specific languages you are looking for?</label>
+  <select id="language-preference">
+    <% @languages.each do |language| %>
+    <%= language.name %>
+    <option value= <%= language.name %>>
+      <% end %>
+  <br>
+  <br>
+<button type="submit" class="btn btn-default">Submit</button>
+</form>
+</div>
