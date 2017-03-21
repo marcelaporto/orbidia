@@ -1,5 +1,7 @@
 get '/register' do
-  redirect "/user/#{@user.id}/set-preferences"
+  @countries = Country.all
+  @languages = Language.all
+  erb :'user/new'
 end
 
 post '/register' do
