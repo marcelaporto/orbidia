@@ -1,5 +1,4 @@
 get '/register' do
-
   redirect "/user/#{@user.id}/set-preferences"
 end
 
