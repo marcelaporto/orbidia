@@ -30,3 +30,10 @@ end
 5.times do
   User.create(full_name: Faker::Name.name, email: Faker::Internet.email, password: 'password', country_id: Country.all.sample.id, language: 'English' )
 end
+
+# Languages
+all_languages = LanguageList::COMMON_LANGUAGES
+
+all_languages.each do |language|
+  Language.create(name: language.name)
+end
