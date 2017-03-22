@@ -4,7 +4,7 @@
 <form class="form-inline" action="/register" method="POST">
   <div class="form-group">
 <label for="fullname">Your full name:</label>
-<input type="email" class="form-control" id="fullname" name="user[fullname]">
+<input type="text" class="form-control" id="fullname" name="user[full_name]">
 </div>
   <div class="form-group">
 <label for="email">Email address:</label>
@@ -26,7 +26,7 @@
 <h4>Preferences</h4>
 <br>
 <label for="preferences">Country number 1:</label>  <br>
-  <select name="user[preferable=country]" class="preference">
+  <select name="preference[country1]" class="preference">
     <option value= "">
     <option value= >
     <% @countries.each do |country| %>
@@ -36,7 +36,7 @@
   </select><br><br>
 
 <label for="preferences">Country number 2:</label>  <br>
-  <select name="user[preferable=country2]" class="preference">
+  <select name="preference[country2]" class="preference">
     <option value= "">
     <option value= >
     <% @countries.each do |country| %>
@@ -45,7 +45,7 @@
       <% end %>
   </select><br><br>
   <label for="preferences">Any specific languages you are looking for?</label>  <br>
-  <select name="user[preferable=language]" class="preference">
+  <select name="preference[language]" class="preference">
     <option value= "">
     <option value= >
     <% @languages.each do |language| %>
@@ -55,7 +55,7 @@
     </select><br><br>
 
   <label for="preferences">What mood are you looking for?</label>  <br>
-  <select name="user[preferable=mood]" class="preference">
+  <select name="preference[mood]" class="preference">
     <option value= "">
     <option value= >
     <% @moods.each do |mood| %>
