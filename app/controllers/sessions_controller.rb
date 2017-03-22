@@ -1,6 +1,6 @@
 get '/register' do
   @countries = Country.all
-  @languages = Language.all
+  @languages = Language.order(:name)
   @moods = Mood.all
   erb :'user/new'
 end
