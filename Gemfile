@@ -16,11 +16,10 @@ gem 'bcrypt'
 gem 'hirb'
 gem 'sinatra-flash'
 
+gem 'json'
+
 gem 'shotgun'
 
 gem 'faker'
 gem 'rspec'
-
-# Add ons for the app
-
-gem 'iso_country_codes'
+ 

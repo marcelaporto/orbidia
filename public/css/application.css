@@ -1,3 +1,8 @@
+.preference {
+  width: 50%;
+  height: 30px;
+}
+
 .container {
   margin: 20px auto;
   width: 800px;
@@ -6,18 +11,34 @@
 }
 
 .container h1 {
-  font-size: 17pt;
+  font-size: 25pt;
+  margin: 0pt;
 
 }
 
 .header {
   text-align: center;
   font-weight: bold;
+  height: 65px;
+  padding: 0px;
 }
 
 
 h1.header{
   font-weight: bolder;
+  font-size: 40px;
+  padding: 0px;
+}
+
+#header-info {
+  display: inline-block;
+  width: 100%;
+  height: 120px;
+  padding: 0px 10px 2px 2px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #f2f2f2;
 }
 
 .about {
@@ -29,11 +50,15 @@ h1.header{
 
 .wide {
   width:100%;
-  height:100%;
+  height:50%;
   height:calc(100% - 1px);
   background-image:url('https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/world-map-watercolor-michael-tompsett.jpg');
+  background-repeat: no-repeat;
   background-size:cover;
   image-rendering: auto;
+  background-position: 50% 50%;
+  align-items: center;
+  justify-content: center;
 }
 
 nav {

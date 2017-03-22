@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  belongs_to :country, class_name: "Country", foreign_key: "user_id"
+  belongs_to :country, class_name: "Country"
   has_many :sugestions
   has_many :endorsements
   has_many :preferences

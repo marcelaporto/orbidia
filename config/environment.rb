@@ -15,6 +15,7 @@ require 'pg'
 require 'bcrypt'
 require 'active_record'
 require 'logger'
+require 'shotgun'
 
 require 'hirb'
 Hirb.enable
@@ -28,8 +29,11 @@ enable :sessions
 require 'erb'
 
 # Add ons for the app
-require 'iso_country_codes'
+
+# require 'iso_country_codes'
 require 'faker'
+# require 'language_list'
+require 'json'
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))

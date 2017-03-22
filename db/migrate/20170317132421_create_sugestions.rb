@@ -3,9 +3,9 @@ class CreateSugestions < ActiveRecord::Migration
     create_table :sugestions do |t|
       t.text :content
       t.integer :review
-      t.references :users
-      t.references :songs
-      t.references :activities
+      t.references :user
+      t.references :song
+      t.references :activity
 
       t.timestamps
     end
