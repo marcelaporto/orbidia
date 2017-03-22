@@ -1,5 +1,6 @@
 require 'rake'
 require 'rspec/core/rake_task'
+# require_relative 'public/countries.json'
 
 
 require ::File.expand_path('../config/environment', __FILE__)
@@ -31,6 +32,26 @@ namespace :generate do
       EOF
     end
   end
+
+  desc "Populates country and language table"
+  task :populate_country_languages do
+      uri = URI.parse("https://raw.githubusercontent.com/mledoze/countries/master/countries.json")
+      res = Net::HTTP.get_response(uri)
+      result = res.body
+
+      all_countries_hash = JSON.parse(result)
+
+      all_countries_hash.each do |country|
+        new_country = Country.create(name:country["name"]["common"] , spotify_iso_id: country["cca2"])
+        country["languages"].each do |initials, language|
+
+          language = Language.find_or_create_by(name: language)
+          new_country.languages << language unless new_country.languages.include?(language)
+
+        end
+      end
+  end
+
 
   desc "Create an empty migration in db/migrate, e.g., rake generate:migration NAME=create_tasks"
   task :migration do
