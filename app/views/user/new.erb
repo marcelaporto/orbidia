@@ -14,10 +14,19 @@
 <label for="pwd">Password:</label>
 <input type="password" class="form-control" id="pwd" name="user[password]">
 </div>
+<label for="preferences">Your home country:</label>  <br>
+  <select name="user[country]" class="preference">
+    <option value= "">
+    <option value= >
+    <% @countries.each do |country| %>
+    <%= country.name %>
+    <option value= <%= country.name %>>
+      <% end %>
+  </select><br><br>
 <h4>Preferences</h4>
 <br>
 <label for="preferences">Country number 1:</label>  <br>
-  <select name="user[preferable]" class="preference">
+  <select name="user[preferable=country]" class="preference">
     <option value= "">
     <option value= >
     <% @countries.each do |country| %>
@@ -27,7 +36,7 @@
   </select><br><br>
 
 <label for="preferences">Country number 2:</label>  <br>
-  <select name="user[preferable]" class="preference">
+  <select name="user[preferable=country2]" class="preference">
     <option value= "">
     <option value= >
     <% @countries.each do |country| %>
@@ -36,7 +45,7 @@
       <% end %>
   </select><br><br>
   <label for="preferences">Any specific languages you are looking for?</label>  <br>
-  <select name="user[preferable]" class="preference">
+  <select name="user[preferable=language]" class="preference">
     <option value= "">
     <option value= >
     <% @languages.each do |language| %>
@@ -46,7 +55,7 @@
     </select><br><br>
 
   <label for="preferences">What mood are you looking for?</label>  <br>
-  <select name="user[preferable]" class="preference">
+  <select name="user[preferable=mood]" class="preference">
     <option value= "">
     <option value= >
     <% @moods.each do |mood| %>
