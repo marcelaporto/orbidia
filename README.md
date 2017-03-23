@@ -1,6 +1,6 @@
 # orbidia
 
-![Build Status](https://travis-ci.org/marcelaporto/orbidia.svg?branch=master)
+![Build Status](https://travis-ci.org/marcelaporto/orbidia.svg?branch=newuser)
 
 
 Orbidia is a web app that connects you to the world, via media suggested by people
