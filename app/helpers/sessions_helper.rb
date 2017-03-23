@@ -9,8 +9,8 @@ helpers do
     current_user ? true : false
   end
 
-  def login
-    session[:user_id] = @user.id
+  def login(user)
+    session[:user_id] = user.id
   end
 
   def logout
