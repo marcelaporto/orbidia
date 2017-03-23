@@ -17,7 +17,7 @@ gem 'hirb'
 gem 'sinatra-flash'
 
 gem 'json'
-gem 'digest/md5'
+# gem 'digest/md5'
 
 gem 'shotgun'
 
