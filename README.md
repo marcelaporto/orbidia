@@ -28,3 +28,8 @@ Countries Data: https://raw.githubusercontent.com/mledoze/countries/
   * Based on what the user likes, he gets more suggestions from SPOTIFY
 * Users can browse suggestions based on Genre, Country, Language or Activity (STRETCH)
 * There are random suggestions on the homepage (STRETCH)
+
+### SPOTIFY API
+
+Endpoint:https://api.spotify.com/v1/recommendations
+Endpoint /v1/recommendations
