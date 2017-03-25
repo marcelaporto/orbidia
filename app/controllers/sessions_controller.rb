@@ -5,11 +5,11 @@ get '/register' do
 end
 
 post '/register' do
-  @user = User.new(full_name: params[:user][:full_name], email: params[:user][:email], password: params[:user][:password], country: Country.find_by(name: params[:user][:country]))
+  @user = User.create(full_name: params[:user][:full_name], email: params[:user][:email], password: params[:user][:password], country: Country.find_by(name: params[:user][:country]))
   login(@user)
 
   @image = @user.get_gravatar(@user.email)
-  redirect "/user/#{@user.id}"
+  redirect "/"
 end
 
 post '/login' do
@@ -26,5 +26,6 @@ post '/login' do
 end
 
 delete '/logout' do
-
+  logout
+  redirect '/'
 end

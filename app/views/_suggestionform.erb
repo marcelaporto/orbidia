@@ -1,12 +1,12 @@
-<form class="form-inline" action="/register" method="POST">
+
+<h3> Search for song</h3>
+<form class="form-inline" action="/showsongs" method="GET">
   <div class="form-group">
   <label for="preferences">Any specific languages you are looking for?</label>  <br>
   <select name="language" class="preference">
-    <option value= "">
-    <option value= >
+    <option value= ""></option>
     <% @languages.each do |language| %>
-    <%= language.name %>
-    <option value= <%= language.name %>>
+    <option value= "<%= language.name %>"> <%= language.name %> </option>
       <% end %>
     </select><br><br>
   </div>
@@ -14,14 +14,12 @@
   <div class="form-group">
   <label for="preferences">Genre</label>  <br>
   <select name="genre" class="preference">
-    <option value= "">
-    <option value= >
-    <% @languages.each do |language| %>
-    <%= language.name %>
-    <option value= <%= language.name %>>
+    <option value= ""></option>
+    <% @genres.each do |genre| %>
+    <option value= "<%= genre.genre %>"><%= genre.genre %></option>
       <% end %>
     </select><br><br>
   </div>
 
-  <button type="submit" class="btn btn-default">Register</button>
+  <button type="submit" class="btn btn-default">Submit</button>
 </form>

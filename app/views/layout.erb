@@ -17,20 +17,21 @@
     <div class="wide">
     <header  class="page-header">
       <a href="/about">About</a>
-      <% if logged_in? %>
-      <form action="/sessions/:id" method="post">
+      <% if session[:user_id] %>
+      <form action="/logout" method="post">
         <input type="hidden" name="_method" value="delete">
         <button id="logout" type="submit">Log Out</button>
+        <a href="/getsongs">Get Songs</a>
+        </form>
       <% else %>
       <a href="/register">Register</a>
       <% end %>
     </header>
     <div id="header-info">
     <h1 class="header">orbidia</h1>
-    <h4 class="header">Creativity around the world, from those who are living it. </h4>
+    <h4 class="header">cherish global creativity </h4>
   </div>
 </div>
-
 <%= yield %>
   </body>
 </html>

@@ -11,6 +11,9 @@ helpers do
 
   def login(user)
     session[:user_id] = user.id
+    puts "user: #{user}"
+    puts "user.id: #{user.id}"
+    puts "session[:user_id]: #{session[:user_id]}"
   end
 
   def logout

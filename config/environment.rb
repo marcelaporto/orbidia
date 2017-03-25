@@ -33,6 +33,9 @@ require 'erb'
 require 'faker'
 require 'json'
 require 'digest/md5'
+require 'dotenv'
+Dotenv.load
+require 'rspotify'
 
 
 # Some helper constants for path-centric logic

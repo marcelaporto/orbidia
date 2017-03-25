@@ -1,3 +1,6 @@
+gem 'dotenv'
+gem 'rspotify'
+
 source 'https://rubygems.org'
 
 # PostgreSQL driver
