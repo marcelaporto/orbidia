@@ -34,3 +34,28 @@ Countries Data: https://raw.githubusercontent.com/mledoze/countries/
 Endpoint:https://api.spotify.com/v1/recommendations
 Endpoint /v1/recommendations
 BQD3Ccr6EAOQUNVOQ7oKtY07sFEHO_zKzNyVxv3cXOwc-cfLus13GBopSVmjORLwoqO7ZPWh7jLvCOaaNwKiZzIfPIy5s2OpUduG7GAoc1BEh0jjvVAoIBiRB9QyCUbBJeybjA10sa8Uv6GO
+
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
