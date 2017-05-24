@@ -1,15 +1,5 @@
-# Require config/environment.rb
-require ::File.expand_path('../config/environment',  __FILE__)
+# This file is used by Rack-based servers to start the application.
 
-set :app_file, __FILE__
+require_relative 'config/environment'
 
-configure do
-  # See: http://www.sinatrarb.com/faq.html#sessions
-  enable :sessions
-  set :session_secret, ENV['SESSION_SECRET'] || 'this is a secret shhhhh'
-
-  # Set the views to
-  set :views, File.join(Sinatra::Application.root, "app", "views")
-end
-
-run Sinatra::Application
+run Rails.application

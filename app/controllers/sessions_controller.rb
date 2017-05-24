@@ -1,29 +1,20 @@
-get '/register' do
-  @countries = Country.all
-  @languages = Language.order(:name)
-  @moods = Mood.all
-  erb :'user/new'
-end
+class SessionsController < ApplicationController
 
-post '/register' do
-# FIRST DRAFT OF REGISTER
-# @user = User.new(params[:user])
-# params[:preferable].each_with_index do |index, thing|
-#   Preference.new(user: @user, preferable: thing)
-# end
-end
+  include SessionsHelper
 
-post '/login' do
-  @user = User.authenticate(params[:email], params[:password])
-  if @user
-    login
-    redirect "/user/#{@user.id}"
-  else
-    # @error
-    redirect '/'
+  def create
+    @user = User.find_by_email(params[:email])
+    if @user && @user.authenticate(params[:password])
+      session[:user_id] = @user.id
+      redirect_to '/users/#{@user.id}'
+    else
+      redirect_to '/login'
+    end
   end
-end
 
-delete '/logout' do
+ def destroy
+    session[:user_id] = nil
+    redirect_to '/login'
+  end
 
 end
