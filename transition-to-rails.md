@@ -19,7 +19,7 @@ string: name
 - CountriesLanguages(join table)
 integer: country_id
 integer: language_id
-
+s
 - Seed file with Spotify's genres + some users
 
 3. Rake Task
