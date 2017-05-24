@@ -1,3 +1,6 @@
+gem 'dotenv'
+gem 'rspotify'
+
 source 'https://rubygems.org'
 
 # PostgreSQL driver
@@ -22,4 +25,3 @@ gem 'shotgun'
 
 gem 'faker'
 gem 'rspec'
- 
