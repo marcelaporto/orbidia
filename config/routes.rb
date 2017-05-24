@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/signup' => 'users#new'
+  get '/register' => 'users#new'
   get '/users/:id' => 'users#show'
   post '/users' => 'users#create'
 
