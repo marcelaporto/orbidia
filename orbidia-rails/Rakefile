@@ -4,3 +4,26 @@
 require_relative 'config/application'
 
 Rails.application.load_tasks
+
+namespace :generate do
+
+  desc "Populates country and language table"
+  task :populate_country_languages do
+      uri = URI.parse("https://raw.githubusercontent.com/mledoze/countries/master/countries.json")
+      res = Net::HTTP.get_response(uri)
+      result = res.body
+
+      all_countries_hash = JSON.parse(result)
+
+      all_countries_hash.each do |country|
+        new_country = Country.create(name:country["name"]["common"] , spotify_iso_id: country["cca2"])
+        country["languages"].each do |initials, language|
+
+          language = Language.find_or_create_by(name: language)
+          new_country.languages << language unless new_country.languages.include?(language)
+
+        end
+      end
+  end
+
+end
